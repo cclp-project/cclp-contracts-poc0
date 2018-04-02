@@ -28,6 +28,11 @@ contract ControlledSupplyToken is EIP621 {
         supplyController = _supplyController; 
     }
 
+    function changeSupplyController(address _newSupplyController) public onlySupplyController {
+        supplyController = _newSupplyController;
+    }
+
+
     function increaseSupply(uint value, address to) public onlySupplyController {
         totalSupply = safeAdd(totalSupply, value);
         balances[to] = safeAdd(balances[to], value);
@@ -41,4 +46,5 @@ contract ControlledSupplyToken is EIP621 {
 
         emit Transfer(from, 0, value);
     }
+
 }

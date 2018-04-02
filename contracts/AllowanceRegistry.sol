@@ -18,6 +18,18 @@ contract AllowanceRegistry is AllowanceRegistryInterface {
         _;
     }
 
+    function AllowanceRegistry(
+        address _owner
+    ) public
+    {
+        require(_owner != 0);
+        owner = _owner; 
+    }
+
+    function changeOwner(address _newOwner) public onlyOwner {
+        owner = _newOwner;
+    }
+
     function setRegistrar(address _registar, bool _value) public onlyOwner {
         registrars[_registar] =_value;
     }

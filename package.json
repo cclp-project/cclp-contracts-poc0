@@ -1,0 +1,26 @@
+{
+  "name": "cclp-contracts",
+  "version": "1.0.0",
+  "description": "Smart Contracts for cCLP",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajunge/cclp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajunge/cclp/issues"
+  },
+  "homepage": "https://github.com/ajunge/cclp#readme",
+  "dependencies": {
+    "ganache-cli": "^6.1.0",
+    "truffle-hdwallet-provider": "0.0.3"
+  }
+}
