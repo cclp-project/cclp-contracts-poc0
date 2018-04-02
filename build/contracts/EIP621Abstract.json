@@ -1,0 +1,805 @@
+{
+  "contractName": "EIP621Abstract",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "balances",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "MAX_UINT256",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "allowed",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "name": "remaining",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "increaseSupply",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "name": "from",
+          "type": "address"
+        }
+      ],
+      "name": "decreaseSupply",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.18;\n\nimport \"./EIP20.sol\";\n\n\ncontract EIP621Abstract  is EIP20 {\n    /// @notice increase this token's total supply by `value` and give the new\n    /// tokens to `to`\n    /// @dev increases the token's totalSupply\n    /// @param value the number of tokens to increase the total supply by\n    /// @param to the address whose balance the new tokens will be attributed\n    function increaseSupply(uint value, address to) public;\n\n    /// @notice decrease this token's total supply by `value` and deduct the\n    /// tokens from the balance of `from`\n    /// @dev decrease the token's totalSupply\n    /// @param value the number of tokens to decrease the total supply by\n    /// @param from the address from whose balance the tokens will be deducted\n    function decreaseSupply(uint value, address from) public;\n}\n",
+  "sourcePath": "/home/ajunge/work/ajunge/cclp/contracts/EIP621Abstract.sol",
+  "ast": {
+    "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/EIP621Abstract.sol",
+    "exportedSymbols": {
+      "EIP621Abstract": [
+        625
+      ]
+    },
+    "id": 626,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 607,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/EIP20.sol",
+        "file": "./EIP20.sol",
+        "id": 608,
+        "nodeType": "ImportDirective",
+        "scope": 626,
+        "sourceUnit": 410,
+        "src": "26:21:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 609,
+              "name": "EIP20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 409,
+              "src": "78:5:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EIP20_$409",
+                "typeString": "contract EIP20"
+              }
+            },
+            "id": 610,
+            "nodeType": "InheritanceSpecifier",
+            "src": "78:5:6"
+          }
+        ],
+        "contractDependencies": [
+          409,
+          475
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 625,
+        "linearizedBaseContracts": [
+          625,
+          409,
+          475
+        ],
+        "name": "EIP621Abstract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice increase this token's total supply by `value` and give the new\n tokens to `to`\n @dev increases the token's totalSupply\n @param value the number of tokens to increase the total supply by\n @param to the address whose balance the new tokens will be attributed",
+            "id": 617,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "increaseSupply",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 615,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 612,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 617,
+                  "src": "415:10:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 611,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "415:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 614,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 617,
+                  "src": "427:10:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 613,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "427:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "414:24:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 616,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "445:0:6"
+            },
+            "scope": 625,
+            "src": "391:55:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice decrease this token's total supply by `value` and deduct the\n tokens from the balance of `from`\n @dev decrease the token's totalSupply\n @param value the number of tokens to decrease the total supply by\n @param from the address from whose balance the tokens will be deducted",
+            "id": 624,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "decreaseSupply",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 619,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 624,
+                  "src": "794:10:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 618,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "794:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 621,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 624,
+                  "src": "806:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 620,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "806:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "793:26:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 623,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "826:0:6"
+            },
+            "scope": 625,
+            "src": "770:57:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 626,
+        "src": "50:779:6"
+      }
+    ],
+    "src": "0:830:6"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/EIP621Abstract.sol",
+    "exportedSymbols": {
+      "EIP621Abstract": [
+        625
+      ]
+    },
+    "id": 626,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 607,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/EIP20.sol",
+        "file": "./EIP20.sol",
+        "id": 608,
+        "nodeType": "ImportDirective",
+        "scope": 626,
+        "sourceUnit": 410,
+        "src": "26:21:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 609,
+              "name": "EIP20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 409,
+              "src": "78:5:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EIP20_$409",
+                "typeString": "contract EIP20"
+              }
+            },
+            "id": 610,
+            "nodeType": "InheritanceSpecifier",
+            "src": "78:5:6"
+          }
+        ],
+        "contractDependencies": [
+          409,
+          475
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 625,
+        "linearizedBaseContracts": [
+          625,
+          409,
+          475
+        ],
+        "name": "EIP621Abstract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice increase this token's total supply by `value` and give the new\n tokens to `to`\n @dev increases the token's totalSupply\n @param value the number of tokens to increase the total supply by\n @param to the address whose balance the new tokens will be attributed",
+            "id": 617,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "increaseSupply",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 615,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 612,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 617,
+                  "src": "415:10:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 611,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "415:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 614,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 617,
+                  "src": "427:10:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 613,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "427:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "414:24:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 616,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "445:0:6"
+            },
+            "scope": 625,
+            "src": "391:55:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": "@notice decrease this token's total supply by `value` and deduct the\n tokens from the balance of `from`\n @dev decrease the token's totalSupply\n @param value the number of tokens to decrease the total supply by\n @param from the address from whose balance the tokens will be deducted",
+            "id": 624,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "decreaseSupply",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 619,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 624,
+                  "src": "794:10:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 618,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "794:4:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 621,
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 624,
+                  "src": "806:12:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 620,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "806:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "793:26:6"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 623,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "826:0:6"
+            },
+            "scope": 625,
+            "src": "770:57:6",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 626,
+        "src": "50:779:6"
+      }
+    ],
+    "src": "0:830:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-04-02T15:34:17.423Z"
+}
