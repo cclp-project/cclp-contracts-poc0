@@ -319,14 +319,14 @@
     "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/EIP621Abstract.sol",
     "exportedSymbols": {
       "EIP621Abstract": [
-        704
+        702
       ]
     },
-    "id": 705,
+    "id": 703,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 686,
+        "id": 684,
         "literals": [
           "solidity",
           "^",
@@ -339,10 +339,10 @@
       {
         "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/EIP20.sol",
         "file": "./EIP20.sol",
-        "id": 687,
+        "id": 685,
         "nodeType": "ImportDirective",
-        "scope": 705,
-        "sourceUnit": 489,
+        "scope": 703,
+        "sourceUnit": 487,
         "src": "26:21:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -353,33 +353,33 @@
             "arguments": [],
             "baseName": {
               "contractScope": null,
-              "id": 688,
+              "id": 686,
               "name": "EIP20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 488,
+              "referencedDeclaration": 486,
               "src": "78:5:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_EIP20_$488",
+                "typeIdentifier": "t_contract$_EIP20_$486",
                 "typeString": "contract EIP20"
               }
             },
-            "id": 689,
+            "id": 687,
             "nodeType": "InheritanceSpecifier",
             "src": "78:5:6"
           }
         ],
         "contractDependencies": [
-          488,
-          554
+          486,
+          552
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 704,
+        "id": 702,
         "linearizedBaseContracts": [
-          704,
-          488,
-          554
+          702,
+          486,
+          552
         ],
         "name": "EIP621Abstract",
         "nodeType": "ContractDefinition",
@@ -387,7 +387,7 @@
           {
             "body": null,
             "documentation": "@notice increase this token's total supply by `value` and give the new\n tokens to `to`\n @dev increases the token's totalSupply\n @param value the number of tokens to increase the total supply by\n @param to the address whose balance the new tokens will be attributed",
-            "id": 696,
+            "id": 694,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -395,15 +395,15 @@
             "name": "increaseSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 694,
+              "id": 692,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 691,
+                  "id": 689,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 696,
+                  "scope": 694,
                   "src": "415:10:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -412,7 +412,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 690,
+                    "id": 688,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "415:4:6",
@@ -426,10 +426,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 693,
+                  "id": 691,
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 696,
+                  "scope": 694,
                   "src": "427:10:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -438,7 +438,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 692,
+                    "id": 690,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "427:7:6",
@@ -455,12 +455,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 695,
+              "id": 693,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "445:0:6"
             },
-            "scope": 704,
+            "scope": 702,
             "src": "391:55:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -469,7 +469,7 @@
           {
             "body": null,
             "documentation": "@notice decrease this token's total supply by `value` and deduct the\n tokens from the balance of `from`\n @dev decrease the token's totalSupply\n @param value the number of tokens to decrease the total supply by\n @param from the address from whose balance the tokens will be deducted",
-            "id": 703,
+            "id": 701,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -477,15 +477,15 @@
             "name": "decreaseSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 701,
+              "id": 699,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 698,
+                  "id": 696,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 703,
+                  "scope": 701,
                   "src": "794:10:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -494,7 +494,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 697,
+                    "id": 695,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "794:4:6",
@@ -508,10 +508,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 700,
+                  "id": 698,
                   "name": "from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 703,
+                  "scope": 701,
                   "src": "806:12:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -520,7 +520,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 699,
+                    "id": 697,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "806:7:6",
@@ -537,19 +537,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 702,
+              "id": 700,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "826:0:6"
             },
-            "scope": 704,
+            "scope": 702,
             "src": "770:57:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 705,
+        "scope": 703,
         "src": "50:779:6"
       }
     ],
@@ -559,14 +559,14 @@
     "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/EIP621Abstract.sol",
     "exportedSymbols": {
       "EIP621Abstract": [
-        704
+        702
       ]
     },
-    "id": 705,
+    "id": 703,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 686,
+        "id": 684,
         "literals": [
           "solidity",
           "^",
@@ -579,10 +579,10 @@
       {
         "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/EIP20.sol",
         "file": "./EIP20.sol",
-        "id": 687,
+        "id": 685,
         "nodeType": "ImportDirective",
-        "scope": 705,
-        "sourceUnit": 489,
+        "scope": 703,
+        "sourceUnit": 487,
         "src": "26:21:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -593,33 +593,33 @@
             "arguments": [],
             "baseName": {
               "contractScope": null,
-              "id": 688,
+              "id": 686,
               "name": "EIP20",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 488,
+              "referencedDeclaration": 486,
               "src": "78:5:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_EIP20_$488",
+                "typeIdentifier": "t_contract$_EIP20_$486",
                 "typeString": "contract EIP20"
               }
             },
-            "id": 689,
+            "id": 687,
             "nodeType": "InheritanceSpecifier",
             "src": "78:5:6"
           }
         ],
         "contractDependencies": [
-          488,
-          554
+          486,
+          552
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 704,
+        "id": 702,
         "linearizedBaseContracts": [
-          704,
-          488,
-          554
+          702,
+          486,
+          552
         ],
         "name": "EIP621Abstract",
         "nodeType": "ContractDefinition",
@@ -627,7 +627,7 @@
           {
             "body": null,
             "documentation": "@notice increase this token's total supply by `value` and give the new\n tokens to `to`\n @dev increases the token's totalSupply\n @param value the number of tokens to increase the total supply by\n @param to the address whose balance the new tokens will be attributed",
-            "id": 696,
+            "id": 694,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -635,15 +635,15 @@
             "name": "increaseSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 694,
+              "id": 692,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 691,
+                  "id": 689,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 696,
+                  "scope": 694,
                   "src": "415:10:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -652,7 +652,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 690,
+                    "id": 688,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "415:4:6",
@@ -666,10 +666,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 693,
+                  "id": 691,
                   "name": "to",
                   "nodeType": "VariableDeclaration",
-                  "scope": 696,
+                  "scope": 694,
                   "src": "427:10:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -678,7 +678,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 692,
+                    "id": 690,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "427:7:6",
@@ -695,12 +695,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 695,
+              "id": 693,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "445:0:6"
             },
-            "scope": 704,
+            "scope": 702,
             "src": "391:55:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -709,7 +709,7 @@
           {
             "body": null,
             "documentation": "@notice decrease this token's total supply by `value` and deduct the\n tokens from the balance of `from`\n @dev decrease the token's totalSupply\n @param value the number of tokens to decrease the total supply by\n @param from the address from whose balance the tokens will be deducted",
-            "id": 703,
+            "id": 701,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -717,15 +717,15 @@
             "name": "decreaseSupply",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 701,
+              "id": 699,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 698,
+                  "id": 696,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 703,
+                  "scope": 701,
                   "src": "794:10:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -734,7 +734,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 697,
+                    "id": 695,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "794:4:6",
@@ -748,10 +748,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 700,
+                  "id": 698,
                   "name": "from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 703,
+                  "scope": 701,
                   "src": "806:12:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -760,7 +760,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 699,
+                    "id": 697,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "806:7:6",
@@ -777,19 +777,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 702,
+              "id": 700,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "826:0:6"
             },
-            "scope": 704,
+            "scope": 702,
             "src": "770:57:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 705,
+        "scope": 703,
         "src": "50:779:6"
       }
     ],
@@ -801,5 +801,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-04-02T19:21:38.977Z"
+  "updatedAt": "2018-04-02T21:51:19.533Z"
 }

@@ -31,14 +31,14 @@
     "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/AllowanceRegistryInterface.sol",
     "exportedSymbols": {
       "AllowanceRegistryInterface": [
-        131
+        129
       ]
     },
-    "id": 132,
+    "id": 130,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 123,
+        "id": 121,
         "literals": [
           "solidity",
           "^",
@@ -54,9 +54,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 131,
+        "id": 129,
         "linearizedBaseContracts": [
-          131
+          129
         ],
         "name": "AllowanceRegistryInterface",
         "nodeType": "ContractDefinition",
@@ -64,7 +64,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 130,
+            "id": 128,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -72,15 +72,15 @@
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 126,
+              "id": 124,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 125,
+                  "id": 123,
                   "name": "_user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 130,
+                  "scope": 128,
                   "src": "88:13:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -89,7 +89,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 124,
+                    "id": 122,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "88:7:1",
@@ -106,15 +106,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 129,
+              "id": 127,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 128,
+                  "id": 126,
                   "name": "_isAllowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 130,
+                  "scope": 128,
                   "src": "118:15:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -123,7 +123,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 127,
+                    "id": 125,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "118:4:1",
@@ -138,14 +138,14 @@
               ],
               "src": "117:17:1"
             },
-            "scope": 131,
+            "scope": 129,
             "src": "69:66:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 132,
+        "scope": 130,
         "src": "27:110:1"
       }
     ],
@@ -155,14 +155,14 @@
     "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/AllowanceRegistryInterface.sol",
     "exportedSymbols": {
       "AllowanceRegistryInterface": [
-        131
+        129
       ]
     },
-    "id": 132,
+    "id": 130,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 123,
+        "id": 121,
         "literals": [
           "solidity",
           "^",
@@ -178,9 +178,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 131,
+        "id": 129,
         "linearizedBaseContracts": [
-          131
+          129
         ],
         "name": "AllowanceRegistryInterface",
         "nodeType": "ContractDefinition",
@@ -188,7 +188,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 130,
+            "id": 128,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -196,15 +196,15 @@
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 126,
+              "id": 124,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 125,
+                  "id": 123,
                   "name": "_user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 130,
+                  "scope": 128,
                   "src": "88:13:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -213,7 +213,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 124,
+                    "id": 122,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "88:7:1",
@@ -230,15 +230,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 129,
+              "id": 127,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 128,
+                  "id": 126,
                   "name": "_isAllowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 130,
+                  "scope": 128,
                   "src": "118:15:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -247,7 +247,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 127,
+                    "id": 125,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "118:4:1",
@@ -262,14 +262,14 @@
               ],
               "src": "117:17:1"
             },
-            "scope": 131,
+            "scope": 129,
             "src": "69:66:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 132,
+        "scope": 130,
         "src": "27:110:1"
       }
     ],
@@ -281,5 +281,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-04-02T19:21:38.974Z"
+  "updatedAt": "2018-04-02T21:51:19.530Z"
 }

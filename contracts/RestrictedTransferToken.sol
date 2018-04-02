@@ -2,8 +2,10 @@ pragma solidity ^0.4.18;
 
 import "./ControlledSupplyToken.sol";
 import "./AllowanceRegistryInterface.sol";
+import "./Ownable.sol";
 
-contract RestrictedTransferToken is ControlledSupplyToken {
+
+contract RestrictedTransferToken is ControlledSupplyToken, Ownable {
 
     address public allowedRegistry;
   
@@ -26,7 +28,8 @@ contract RestrictedTransferToken is ControlledSupplyToken {
         _decimalUnits,
         _tokenSymbol,
         _supplyController
-    ) public
+    ) Ownable ()
+    public
     {
         require(_allowedRegistry != 0);
         allowedRegistry = _allowedRegistry; 
@@ -51,6 +54,11 @@ contract RestrictedTransferToken is ControlledSupplyToken {
         }
         emit Transfer(_from, _to, _value);
         return true;
+    }
+
+    function changeRegistry(address _newRegistry) public onlyOwner{
+        require(_newRegistry != 0);
+        allowedRegistry = _newRegistry; 
     }
 
 }

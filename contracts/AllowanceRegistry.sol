@@ -1,34 +1,20 @@
 pragma solidity ^0.4.18;
 
 import "./AllowanceRegistryInterface.sol";
+import "./Ownable.sol";
 
-contract AllowanceRegistry is AllowanceRegistryInterface {
+contract AllowanceRegistry is AllowanceRegistryInterface, Ownable {
     
-    address public owner;
     mapping (address => bool) public registrars;
     mapping (address => bool) public allowed;
-
-    modifier onlyOwner {
-        require(msg.sender == owner);
-        _;
-    }
 
     modifier onlyRegistrar {
         require(registrars[msg.sender]);
         _;
     }
-
-    function AllowanceRegistry(
-        address _owner
-    ) public
-    {
-        require(_owner != 0);
-        owner = _owner; 
-    }
-
-    function changeOwner(address _newOwner) public onlyOwner {
-        owner = _newOwner;
-    }
+    
+    function AllowanceRegistry() Ownable() public 
+    {}
 
     function setRegistrar(address _registar, bool _value) public onlyOwner {
         registrars[_registar] =_value;
@@ -36,16 +22,21 @@ contract AllowanceRegistry is AllowanceRegistryInterface {
 
     function allowUser(address _user) public onlyRegistrar {
         allowed[_user] = true;
+        emit Allow(msg.sender, _user, now);
     }
 
     function denyUser(address _user) public onlyRegistrar {
         allowed[_user] = false;
+        emit Deny(msg.sender, _user, now);
     }
 
 
     function isAllowed(address _user) public returns(bool _isAllowed){
         return allowed[_user];
     }
+
+    event Allow(address indexed _registar, address indexed _user, uint256 _timestamp); 
+    event Deny (address indexed _registar, address indexed _user, uint256 _timestamp); 
 
 
 }
