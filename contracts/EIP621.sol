@@ -1,8 +1,11 @@
 pragma solidity ^0.4.18;
 
+import "zeppelin-solidity/contracts/math/SafeMath.sol";
+
 import "./EIP621Abstract.sol";
 
 contract EIP621 is EIP621Abstract {
+    using SafeMath for uint256;
 
     function EIP621(
         uint256 _initialAmount,
@@ -18,26 +21,16 @@ contract EIP621 is EIP621Abstract {
     {}
 
     function increaseSupply(uint value, address to) public {
-        totalSupply = safeAdd(totalSupply, value);
-        balances[to] = safeAdd(balances[to], value);
+        totalSupply = totalSupply.add(value);
+        balances[to] = balances[to].add(value);
 
         emit Transfer(0, to, value);
     }
 
-    function safeAdd(uint a, uint b) internal pure returns (uint) {
-        require(a + b >= a);
-        return a + b;
-    }
-
     function decreaseSupply(uint value, address from) public {
-        balances[from] = safeSub(balances[from], value);
-        totalSupply = safeSub(totalSupply, value);
+        balances[from] = balances[from].sub(value);
+        totalSupply = totalSupply.sub(value);
 
         emit Transfer(from, 0, value);
-    }
-
-    function safeSub(uint a, uint b) internal pure returns (uint) {
-        require(a >= b);
-        return a - b;
     }
 }

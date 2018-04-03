@@ -1,8 +1,9 @@
 pragma solidity ^0.4.18;
 
+import "zeppelin-solidity/contracts/ownership/Ownable.sol";
+
 import "./ControlledSupplyToken.sol";
 import "./AllowanceRegistryInterface.sol";
-import "./Ownable.sol";
 
 
 contract RestrictedTransferToken is ControlledSupplyToken, Ownable {
@@ -28,7 +29,7 @@ contract RestrictedTransferToken is ControlledSupplyToken, Ownable {
         _decimalUnits,
         _tokenSymbol,
         _supplyController
-    ) Ownable ()
+    )
     public
     {
         require(_allowedRegistry != 0);

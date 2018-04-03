@@ -2,6 +2,7 @@ pragma solidity ^0.4.18;
 
 import "./EIP621.sol";
 
+
 contract ControlledSupplyToken is EIP621 {
 
     address public supplyController;
@@ -34,15 +35,15 @@ contract ControlledSupplyToken is EIP621 {
 
 
     function increaseSupply(uint value, address to) public onlySupplyController {
-        totalSupply = safeAdd(totalSupply, value);
-        balances[to] = safeAdd(balances[to], value);
+        totalSupply = totalSupply.add(value);
+        balances[to] = balances[to].add(value);
 
         emit Transfer(0, to, value);
     }
 
     function decreaseSupply(uint value, address from) public onlySupplyController {
-        balances[from] = safeSub(balances[from], value);
-        totalSupply = safeSub(totalSupply, value);
+        balances[from] = balances[from].sub(value);
+        totalSupply = totalSupply.sub(value);
 
         emit Transfer(from, 0, value);
     }
