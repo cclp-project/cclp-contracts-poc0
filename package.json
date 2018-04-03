@@ -1,8 +1,8 @@
 {
   "name": "cclp-contracts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Smart Contracts for cCLP",
-  "main": "truffle.js",
+  "main": "artifact-index.js",
   "directories": {
     "test": "test"
   },
