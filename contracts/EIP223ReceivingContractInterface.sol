@@ -1,4 +1,4 @@
-pragma solidity 0.4.19;
+pragma solidity 0.4.21;
 
 
 /// @title Contract that supports the receival of EIP223 tokens.

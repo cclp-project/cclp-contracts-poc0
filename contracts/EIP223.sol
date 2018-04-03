@@ -1,4 +1,4 @@
-pragma solidity 0.4.19;
+pragma solidity 0.4.21;
 
 import "zeppelin-solidity/contracts/token/ERC20/BasicToken.sol";
 
@@ -39,7 +39,7 @@ contract EIP223 is EIP223Interface, BasicToken {
             EIP223ReceivingContractInterface receiver = EIP223ReceivingContractInterface(_to);
             receiver.tokenFallback(msg.sender, _value, _data);
         }
-        Transfer(msg.sender, _to, _value, _data);
+        emit Transfer(msg.sender, _to, _value, _data);
         return true;
     }
 
