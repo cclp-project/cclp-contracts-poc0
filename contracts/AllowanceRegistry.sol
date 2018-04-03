@@ -1,7 +1,9 @@
 pragma solidity ^0.4.18;
 
+import "zeppelin-solidity/contracts/ownership/Ownable.sol";
+
 import "./AllowanceRegistryInterface.sol";
-import "./Ownable.sol";
+
 
 contract AllowanceRegistry is AllowanceRegistryInterface, Ownable {
     
@@ -13,7 +15,7 @@ contract AllowanceRegistry is AllowanceRegistryInterface, Ownable {
         _;
     }
     
-    function AllowanceRegistry() Ownable() public 
+    function AllowanceRegistry() public 
     {}
 
     function setRegistrar(address _registar, bool _value) public onlyOwner {

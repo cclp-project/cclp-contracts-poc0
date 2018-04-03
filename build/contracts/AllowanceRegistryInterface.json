@@ -26,19 +26,19 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.4.18;\n\n\ncontract AllowanceRegistryInterface {\n    function isAllowed(address _user) public returns(bool _isAllowed);\n}\n",
-  "sourcePath": "/home/ajunge/work/ajunge/cclp/contracts/AllowanceRegistryInterface.sol",
+  "sourcePath": "/home/vdrg/Work/cCLP/cclp/contracts/AllowanceRegistryInterface.sol",
   "ast": {
-    "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/AllowanceRegistryInterface.sol",
+    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/AllowanceRegistryInterface.sol",
     "exportedSymbols": {
       "AllowanceRegistryInterface": [
-        129
+        9
       ]
     },
-    "id": 130,
+    "id": 10,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 121,
+        "id": 1,
         "literals": [
           "solidity",
           "^",
@@ -46,7 +46,7 @@
           ".18"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:1"
+        "src": "0:24:0"
       },
       {
         "baseContracts": [],
@@ -54,9 +54,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 129,
+        "id": 9,
         "linearizedBaseContracts": [
-          129
+          9
         ],
         "name": "AllowanceRegistryInterface",
         "nodeType": "ContractDefinition",
@@ -64,7 +64,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 128,
+            "id": 8,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -72,16 +72,16 @@
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 124,
+              "id": 4,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 123,
+                  "id": 3,
                   "name": "_user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "88:13:1",
+                  "scope": 8,
+                  "src": "88:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -89,10 +89,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 122,
+                    "id": 2,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "88:7:1",
+                    "src": "88:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -102,20 +102,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "87:15:1"
+              "src": "87:15:0"
             },
             "payable": false,
             "returnParameters": {
-              "id": 127,
+              "id": 7,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 126,
+                  "id": 6,
                   "name": "_isAllowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "118:15:1",
+                  "scope": 8,
+                  "src": "118:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -123,10 +123,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 125,
+                    "id": 5,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "118:4:1",
+                    "src": "118:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -136,33 +136,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "117:17:1"
+              "src": "117:17:0"
             },
-            "scope": 129,
-            "src": "69:66:1",
+            "scope": 9,
+            "src": "69:66:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 130,
-        "src": "27:110:1"
+        "scope": 10,
+        "src": "27:110:0"
       }
     ],
-    "src": "0:138:1"
+    "src": "0:138:0"
   },
   "legacyAST": {
-    "absolutePath": "/home/ajunge/work/ajunge/cclp/contracts/AllowanceRegistryInterface.sol",
+    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/AllowanceRegistryInterface.sol",
     "exportedSymbols": {
       "AllowanceRegistryInterface": [
-        129
+        9
       ]
     },
-    "id": 130,
+    "id": 10,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 121,
+        "id": 1,
         "literals": [
           "solidity",
           "^",
@@ -170,7 +170,7 @@
           ".18"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:1"
+        "src": "0:24:0"
       },
       {
         "baseContracts": [],
@@ -178,9 +178,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 129,
+        "id": 9,
         "linearizedBaseContracts": [
-          129
+          9
         ],
         "name": "AllowanceRegistryInterface",
         "nodeType": "ContractDefinition",
@@ -188,7 +188,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 128,
+            "id": 8,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -196,16 +196,16 @@
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 124,
+              "id": 4,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 123,
+                  "id": 3,
                   "name": "_user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "88:13:1",
+                  "scope": 8,
+                  "src": "88:13:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -213,10 +213,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 122,
+                    "id": 2,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "88:7:1",
+                    "src": "88:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -226,20 +226,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "87:15:1"
+              "src": "87:15:0"
             },
             "payable": false,
             "returnParameters": {
-              "id": 127,
+              "id": 7,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 126,
+                  "id": 6,
                   "name": "_isAllowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 128,
-                  "src": "118:15:1",
+                  "scope": 8,
+                  "src": "118:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -247,10 +247,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 125,
+                    "id": 5,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "118:4:1",
+                    "src": "118:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -260,20 +260,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "117:17:1"
+              "src": "117:17:0"
             },
-            "scope": 129,
-            "src": "69:66:1",
+            "scope": 9,
+            "src": "69:66:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 130,
-        "src": "27:110:1"
+        "scope": 10,
+        "src": "27:110:0"
       }
     ],
-    "src": "0:138:1"
+    "src": "0:138:0"
   },
   "compiler": {
     "name": "solc",
@@ -281,5 +281,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-04-02T22:03:42.829Z"
+  "updatedAt": "2018-04-03T20:05:33.844Z"
 }
