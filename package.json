@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "truffle compile",
+    "test": "truffle test"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,6 @@
     "ganache-cli": "^6.1.0",
     "truffle": "4.1.5",
     "truffle-hdwallet-provider": "0.0.3",
-    "zeppelin-solidity": "^1.8.0"
+    "zeppelin-solidity": "1.8.0"
   }
 }

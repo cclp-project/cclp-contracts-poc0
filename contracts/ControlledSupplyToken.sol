@@ -1,8 +1,9 @@
 pragma solidity 0.4.21;
 
-import "./EIP621.sol";
+import "zeppelin-solidity/contracts/token/ERC20/BasicToken.sol";
 
-contract ControlledSupplyToken is EIP621 {
+
+contract ControlledSupplyToken is BasicToken {
 
     address public supplyController;
   
@@ -11,18 +12,8 @@ contract ControlledSupplyToken is EIP621 {
         _;
     }
 
-    function ControlledSupplyToken(
-        uint256 _initialAmount,
-        string _tokenName,
-        uint8 _decimalUnits,
-        string _tokenSymbol,
-        address _supplyController
-    ) EIP621(
-        _initialAmount,
-        _tokenName,
-        _decimalUnits,
-        _tokenSymbol
-    ) public
+    function ControlledSupplyToken(address _supplyController) 
+        public
     {
         require(_supplyController != 0);
         supplyController = _supplyController; 
@@ -32,17 +23,16 @@ contract ControlledSupplyToken is EIP621 {
         supplyController = _newSupplyController;
     }
 
-
     function increaseSupply(uint value, address to) public onlySupplyController {
-        totalSupply = safeAdd(totalSupply, value);
-        balances[to] = safeAdd(balances[to], value);
+        totalSupply_ = totalSupply_.add(value);
+        balances[to] = balances[to].add(value);
 
         emit Transfer(0, to, value);
     }
 
     function decreaseSupply(uint value, address from) public onlySupplyController {
-        balances[from] = safeSub(balances[from], value);
-        totalSupply = safeSub(totalSupply, value);
+        balances[from] = balances[from].sub(value);
+        totalSupply_ = totalSupply_.sub(value);
 
         emit Transfer(from, 0, value);
     }
