@@ -8,4 +8,3 @@ coverage.json
 test/.geth/geth
 test/.geth/history
 allFiredEvents
-.build/
