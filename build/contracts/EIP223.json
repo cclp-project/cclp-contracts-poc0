@@ -171,7 +171,7 @@
         "id": 245,
         "nodeType": "ImportDirective",
         "scope": 335,
-        "sourceUnit": 841,
+        "sourceUnit": 876,
         "src": "25:64:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -221,7 +221,7 @@
         ],
         "contractDependencies": [
           361,
-          949
+          984
         ],
         "contractKind": "contract",
         "documentation": "@title ERC223 standard token implementation.",
@@ -230,7 +230,7 @@
         "linearizedBaseContracts": [
           334,
           361,
-          949
+          984
         ],
         "name": "EIP223",
         "nodeType": "ContractDefinition",
@@ -251,7 +251,7 @@
                       "name": "revert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1212,
+                      "referencedDeclaration": 1247,
                       "src": "356:6:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_revert_pure$__$returns$__$",
@@ -423,7 +423,7 @@
                             "name": "super",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1238,
+                            "referencedDeclaration": 1273,
                             "src": "1314:5:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_super$_EIP223_$334",
@@ -437,7 +437,7 @@
                           "lValueRequested": false,
                           "memberName": "transfer",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 940,
+                          "referencedDeclaration": 975,
                           "src": "1314:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -470,7 +470,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1211,
+                      "referencedDeclaration": 1246,
                       "src": "1306:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -654,7 +654,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1208,
+                                "referencedDeclaration": 1243,
                                 "src": "1501:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -777,7 +777,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1208,
+                          "referencedDeclaration": 1243,
                           "src": "1561:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -862,7 +862,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
                         349,
-                        948
+                        983
                       ],
                       "referencedDeclaration": 349,
                       "src": "1552:8:3",
@@ -1191,7 +1191,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1211,
+                      "referencedDeclaration": 1246,
                       "src": "2205:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1346,7 +1346,7 @@
             "scope": 334,
             "src": "2098:172:3",
             "stateMutability": "nonpayable",
-            "superFunction": 940,
+            "superFunction": 975,
             "visibility": "public"
           }
         ],
@@ -1382,7 +1382,7 @@
         "id": 245,
         "nodeType": "ImportDirective",
         "scope": 335,
-        "sourceUnit": 841,
+        "sourceUnit": 876,
         "src": "25:64:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1432,7 +1432,7 @@
         ],
         "contractDependencies": [
           361,
-          949
+          984
         ],
         "contractKind": "contract",
         "documentation": "@title ERC223 standard token implementation.",
@@ -1441,7 +1441,7 @@
         "linearizedBaseContracts": [
           334,
           361,
-          949
+          984
         ],
         "name": "EIP223",
         "nodeType": "ContractDefinition",
@@ -1462,7 +1462,7 @@
                       "name": "revert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1212,
+                      "referencedDeclaration": 1247,
                       "src": "356:6:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_revert_pure$__$returns$__$",
@@ -1634,7 +1634,7 @@
                             "name": "super",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1238,
+                            "referencedDeclaration": 1273,
                             "src": "1314:5:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_super$_EIP223_$334",
@@ -1648,7 +1648,7 @@
                           "lValueRequested": false,
                           "memberName": "transfer",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 940,
+                          "referencedDeclaration": 975,
                           "src": "1314:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -1681,7 +1681,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1211,
+                      "referencedDeclaration": 1246,
                       "src": "1306:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1865,7 +1865,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1208,
+                                "referencedDeclaration": 1243,
                                 "src": "1501:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -1988,7 +1988,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1208,
+                          "referencedDeclaration": 1243,
                           "src": "1561:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2073,7 +2073,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
                         349,
-                        948
+                        983
                       ],
                       "referencedDeclaration": 349,
                       "src": "1552:8:3",
@@ -2402,7 +2402,7 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1211,
+                      "referencedDeclaration": 1246,
                       "src": "2205:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2557,7 +2557,7 @@
             "scope": 334,
             "src": "2098:172:3",
             "stateMutability": "nonpayable",
-            "superFunction": 940,
+            "superFunction": 975,
             "visibility": "public"
           }
         ],
@@ -2573,5 +2573,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-04-04T16:25:57.079Z"
+  "updatedAt": "2018-04-04T17:46:33.241Z"
 }
