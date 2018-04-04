@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18;
+pragma solidity 0.4.21;
 
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
@@ -6,7 +6,7 @@ import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 import "./AllowanceRegistryInterface.sol";
 
 
-contract RestrictedTransferToken is StandardToken, Ownable {
+contract RestrictedTransferToken is Ownable, StandardToken{
 
     AllowanceRegistryInterface public registry;
   
