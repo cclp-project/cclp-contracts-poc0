@@ -1,6 +1,6 @@
-pragma solidity ^0.4.18;
+pragma solidity 0.4.21;
 
 
 contract AllowanceRegistryInterface {
-    function isAllowed(address _user) public returns(bool _isAllowed);
+    function isAllowed(address _user) public view returns(bool _isAllowed);
 }

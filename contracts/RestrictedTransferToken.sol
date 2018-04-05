@@ -1,64 +1,48 @@
-pragma solidity ^0.4.18;
+pragma solidity 0.4.21;
 
-import "./ControlledSupplyToken.sol";
+import "zeppelin-solidity/contracts/ownership/Ownable.sol";
+import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
+
 import "./AllowanceRegistryInterface.sol";
-import "./Ownable.sol";
 
 
-contract RestrictedTransferToken is ControlledSupplyToken, Ownable {
+contract RestrictedTransferToken is Ownable, StandardToken{
 
-    address public allowedRegistry;
+    AllowanceRegistryInterface public registry;
   
-    modifier onlyToAllowed {
-        AllowanceRegistryInterface registry = AllowanceRegistryInterface(allowedRegistry);
-        require(registry.isAllowed(msg.sender));
+    modifier onlyToAllowed(address recipient) {
+        require(registry.isAllowed(recipient));
         _;
     }
 
-    function RestrictedTransferToken(
-        uint256 _initialAmount,
-        string _tokenName,
-        uint8 _decimalUnits,
-        string _tokenSymbol,
-        address _supplyController,
-        address _allowedRegistry
-    ) ControlledSupplyToken(
-        _initialAmount,
-        _tokenName,
-        _decimalUnits,
-        _tokenSymbol,
-        _supplyController
-    ) Ownable ()
-    public
+    function RestrictedTransferToken(AllowanceRegistryInterface _registry) public {
+        require(address(_registry) != 0);
+        registry = _registry; 
+    }
+
+    function transfer(address _to, uint256 _value)
+        public 
+        onlyToAllowed(_to) 
+        returns (bool success) 
     {
-        require(_allowedRegistry != 0);
-        allowedRegistry = _allowedRegistry; 
+        return super.transfer(_to, _value);
     }
 
-
-    function transfer(address _to, uint256 _value) public onlyToAllowed returns (bool success) {
-        require(balances[msg.sender] >= _value);
-        balances[msg.sender] -= _value;
-        balances[_to] += _value;
-        emit Transfer(msg.sender, _to, _value);
-        return true;
+    function transferFrom(address _from, address _to, uint256 _value)
+        public 
+        onlyToAllowed(_to)
+        returns (bool success) 
+    {
+        return super.transferFrom(_from, _to, _value);
     }
 
-    function transferFrom(address _from, address _to, uint256 _value) public onlyToAllowed returns (bool success) {
-        uint256 allowance = allowed[_from][msg.sender];
-        require(balances[_from] >= _value && allowance >= _value);
-        balances[_to] += _value;
-        balances[_from] -= _value;
-        if (allowance < MAX_UINT256) {
-            allowed[_from][msg.sender] -= _value;
-        }
-        emit Transfer(_from, _to, _value);
-        return true;
+    function changeRegistry(AllowanceRegistryInterface _newRegistry) public onlyOwner {
+        require(address(_newRegistry) != 0);
+        registry = _newRegistry; 
     }
-
-    function changeRegistry(address _newRegistry) public onlyOwner{
-        require(_newRegistry != 0);
-        allowedRegistry = _newRegistry; 
+    
+    function isAllowed(address _user) public view returns(bool _isAllowed){
+        return registry.isAllowed(_user);
     }
 
 }
