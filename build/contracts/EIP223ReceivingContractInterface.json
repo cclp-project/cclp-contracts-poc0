@@ -29,9 +29,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity 0.4.21;\n\n\n/// @title Contract that supports the receival of EIP223 tokens.\ncontract EIP223ReceivingContractInterface {\n        /// @dev Standard EIP223 function that will handle incoming token transfers.\n        /// @param _from  Token sender address.\n        /// @param _value Amount of tokens.\n        /// @param _data  Transaction metadata.\n        function tokenFallback(address _from, uint _value, bytes _data) public;\n}",
-  "sourcePath": "/home/anibal/Programs/cclp/contracts/EIP223ReceivingContractInterface.sol",
+  "sourcePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223ReceivingContractInterface.sol",
   "ast": {
-    "absolutePath": "/home/anibal/Programs/cclp/contracts/EIP223ReceivingContractInterface.sol",
+    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223ReceivingContractInterface.sol",
     "exportedSymbols": {
       "EIP223ReceivingContractInterface": [
         373
@@ -179,7 +179,7 @@
     "src": "0:441:5"
   },
   "legacyAST": {
-    "absolutePath": "/home/anibal/Programs/cclp/contracts/EIP223ReceivingContractInterface.sol",
+    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223ReceivingContractInterface.sol",
     "exportedSymbols": {
       "EIP223ReceivingContractInterface": [
         373
@@ -332,5 +332,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-04-04T17:46:33.241Z"
+  "updatedAt": "2018-04-05T16:33:59.070Z"
 }

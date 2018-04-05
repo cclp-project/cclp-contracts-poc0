@@ -33,7 +33,7 @@ contract AllowanceRegistry is AllowanceRegistryInterface, Ownable {
     }
 
 
-    function isAllowed(address _user) public returns(bool _isAllowed){
+    function isAllowed(address _user) public view returns(bool _isAllowed){
         return allowed[_user];
     }
 
