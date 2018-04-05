@@ -1,7 +1,7 @@
 module.exports = {
-    RestrictedTransferToken: {
+    cCLP: {
         latestVersion: 'v1',
-        v1: require('./build/contracts/RestrictedTransferToken.json'),
+        v1: require('./build/contracts/cCLP.json'),
       },
     AllowanceRegistry: {
       latestVersion: 'v1',

@@ -1,5 +1,4 @@
 const AllowanceRegistry = artifacts.require('AllowanceRegistry');
-const RestrictedTransferToken = artifacts.require('RestrictedTransferToken');
 const cCLP = artifacts.require('cCLP');
 
 const REGISTRY_OWNER="0x9C803151d0fD38f8C9FCEe7D5d02498dF6067E5A"; //ajunge key
