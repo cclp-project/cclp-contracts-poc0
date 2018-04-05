@@ -2,7 +2,7 @@
   "contractName": "AllowanceRegistryInterface",
   "abi": [
     {
-      "constant": false,
+      "constant": true,
       "inputs": [
         {
           "name": "_user",
@@ -17,7 +17,7 @@
         }
       ],
       "payable": false,
-      "stateMutability": "nonpayable",
+      "stateMutability": "view",
       "type": "function"
     }
   ],
@@ -25,10 +25,10 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity 0.4.21;\n\n\ncontract AllowanceRegistryInterface {\n    function isAllowed(address _user) public returns(bool _isAllowed);\n}\n",
-  "sourcePath": "/home/anibal/Programs/cclp/contracts/AllowanceRegistryInterface.sol",
+  "source": "pragma solidity 0.4.21;\n\n\ncontract AllowanceRegistryInterface {\n    function isAllowed(address _user) public view returns(bool _isAllowed);\n}\n",
+  "sourcePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/AllowanceRegistryInterface.sol",
   "ast": {
-    "absolutePath": "/home/anibal/Programs/cclp/contracts/AllowanceRegistryInterface.sol",
+    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/AllowanceRegistryInterface.sol",
     "exportedSymbols": {
       "AllowanceRegistryInterface": [
         127
@@ -66,7 +66,7 @@
             "id": 126,
             "implemented": false,
             "isConstructor": false,
-            "isDeclaredConst": false,
+            "isDeclaredConst": true,
             "modifiers": [],
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
@@ -114,7 +114,7 @@
                   "name": "_isAllowed",
                   "nodeType": "VariableDeclaration",
                   "scope": 126,
-                  "src": "117:15:1",
+                  "src": "122:15:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -125,7 +125,7 @@
                     "id": 123,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "117:4:1",
+                    "src": "122:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -135,23 +135,23 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "116:17:1"
+              "src": "121:17:1"
             },
             "scope": 127,
-            "src": "68:66:1",
-            "stateMutability": "nonpayable",
+            "src": "68:71:1",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 128,
-        "src": "26:110:1"
+        "src": "26:115:1"
       }
     ],
-    "src": "0:137:1"
+    "src": "0:142:1"
   },
   "legacyAST": {
-    "absolutePath": "/home/anibal/Programs/cclp/contracts/AllowanceRegistryInterface.sol",
+    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/AllowanceRegistryInterface.sol",
     "exportedSymbols": {
       "AllowanceRegistryInterface": [
         127
@@ -189,7 +189,7 @@
             "id": 126,
             "implemented": false,
             "isConstructor": false,
-            "isDeclaredConst": false,
+            "isDeclaredConst": true,
             "modifiers": [],
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
@@ -237,7 +237,7 @@
                   "name": "_isAllowed",
                   "nodeType": "VariableDeclaration",
                   "scope": 126,
-                  "src": "117:15:1",
+                  "src": "122:15:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -248,7 +248,7 @@
                     "id": 123,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "117:4:1",
+                    "src": "122:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -258,20 +258,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "116:17:1"
+              "src": "121:17:1"
             },
             "scope": 127,
-            "src": "68:66:1",
-            "stateMutability": "nonpayable",
+            "src": "68:71:1",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 128,
-        "src": "26:110:1"
+        "src": "26:115:1"
       }
     ],
-    "src": "0:137:1"
+    "src": "0:142:1"
   },
   "compiler": {
     "name": "solc",
@@ -279,5 +279,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-04-04T17:46:33.240Z"
+  "updatedAt": "2018-04-05T16:33:59.067Z"
 }

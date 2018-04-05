@@ -41,8 +41,8 @@ contract RestrictedTransferToken is Ownable, StandardToken{
         registry = _newRegistry; 
     }
     
-    function isAllowed(address _user) public returns(bool _isAllowed){
-        return registry.isAllowed(recipient)
+    function isAllowed(address _user) public view returns(bool _isAllowed){
+        return registry.isAllowed(_user);
     }
 
 }
