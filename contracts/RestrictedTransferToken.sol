@@ -40,5 +40,9 @@ contract RestrictedTransferToken is Ownable, StandardToken{
         require(address(_newRegistry) != 0);
         registry = _newRegistry; 
     }
+    
+    function isAllowed(address _user) public returns(bool _isAllowed){
+        return registry.isAllowed(recipient)
+    }
 
 }
