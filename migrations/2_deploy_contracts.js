@@ -1,10 +1,10 @@
 const AllowanceRegistry = artifacts.require('AllowanceRegistry');
 const cCLP = artifacts.require('cCLP');
 
-const REGISTRY_OWNER="0x9C803151d0fD38f8C9FCEe7D5d02498dF6067E5A"; //ajunge key
+const REGISTRY_OWNER="0x4503d2cb92be591f4f4e650a953f7da10cb2ffe7"; //multisig key
 
-const SUPPLY_CONTROLLER="0x9C803151d0fD38f8C9FCEe7D5d02498dF6067E5A"; //ajunge key
-const TOKEN_OWNER="0x9C803151d0fD38f8C9FCEe7D5d02498dF6067E5A"; //ajunge key
+const SUPPLY_CONTROLLER="0x515f4508f0b287b3b953f120b472a9d346e6e616"; //ajunge key
+const TOKEN_OWNER="0x515f4508f0b287b3b953f120b472a9d346e6e616"; //ajunge key
 
 module.exports = function (deployer) {
   deployer.deploy(AllowanceRegistry)
