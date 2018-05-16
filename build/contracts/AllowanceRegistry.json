@@ -2985,6 +2985,74 @@
     "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
   },
   "networks": {
+    "3": {
+      "events": {
+        "0x887d9984e762f92db7d8e62204192cc636432b470e181f49d117b7e8ac8c0505": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_registar",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_timestamp",
+              "type": "uint256"
+            }
+          ],
+          "name": "Allow",
+          "type": "event"
+        },
+        "0x51c581be11198e3a89904557c1a9915b9dd3c04442606a6f63898835f6cbec02": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_registar",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_timestamp",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deny",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xd729ab6b6498f67e89eb8baab545ee6926974f8d",
+      "transactionHash": "0x9025770dd33e691690084ba46510c642bdf59b6b6a4f537d6cc44cf1027aceac"
+    },
     "4": {
       "events": {
         "0x887d9984e762f92db7d8e62204192cc636432b470e181f49d117b7e8ac8c0505": {
@@ -3055,5 +3123,5 @@
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-07T13:59:35.269Z"
+  "updatedAt": "2018-05-16T19:45:29.636Z"
 }
