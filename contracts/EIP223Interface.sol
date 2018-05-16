@@ -1,6 +1,6 @@
-pragma solidity 0.4.21;
+pragma solidity 0.4.23;
 
-import "zeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol";
 
 /**
  * @title EIP223 standard token interface.

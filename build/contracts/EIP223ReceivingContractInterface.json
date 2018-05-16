@@ -28,24 +28,24 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity 0.4.21;\n\n\n/// @title Contract that supports the receival of EIP223 tokens.\ncontract EIP223ReceivingContractInterface {\n        /// @dev Standard EIP223 function that will handle incoming token transfers.\n        /// @param _from  Token sender address.\n        /// @param _value Amount of tokens.\n        /// @param _data  Transaction metadata.\n        function tokenFallback(address _from, uint _value, bytes _data) public;\n}",
-  "sourcePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223ReceivingContractInterface.sol",
+  "source": "pragma solidity 0.4.23;\n\n\n/// @title Contract that supports the receival of EIP223 tokens.\ncontract EIP223ReceivingContractInterface {\n        /// @dev Standard EIP223 function that will handle incoming token transfers.\n        /// @param _from  Token sender address.\n        /// @param _value Amount of tokens.\n        /// @param _data  Transaction metadata.\n        function tokenFallback(address _from, uint _value, bytes _data) public;\n}\n",
+  "sourcePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223ReceivingContractInterface.sol",
   "ast": {
-    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223ReceivingContractInterface.sol",
+    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223ReceivingContractInterface.sol",
     "exportedSymbols": {
       "EIP223ReceivingContractInterface": [
-        373
+        362
       ]
     },
-    "id": 374,
+    "id": 363,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 363,
+        "id": 352,
         "literals": [
           "solidity",
           "0.4",
-          ".21"
+          ".23"
         ],
         "nodeType": "PragmaDirective",
         "src": "0:23:5"
@@ -56,9 +56,9 @@
         "contractKind": "contract",
         "documentation": "@title Contract that supports the receival of EIP223 tokens.",
         "fullyImplemented": false,
-        "id": 373,
+        "id": 362,
         "linearizedBaseContracts": [
-          373
+          362
         ],
         "name": "EIP223ReceivingContractInterface",
         "nodeType": "ContractDefinition",
@@ -66,7 +66,7 @@
           {
             "body": null,
             "documentation": "@dev Standard EIP223 function that will handle incoming token transfers.\n @param _from  Token sender address.\n @param _value Amount of tokens.\n @param _data  Transaction metadata.",
-            "id": 372,
+            "id": 361,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -74,15 +74,15 @@
             "name": "tokenFallback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 370,
+              "id": 359,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 365,
+                  "id": 354,
                   "name": "_from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 372,
+                  "scope": 361,
                   "src": "391:13:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -91,7 +91,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 364,
+                    "id": 353,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "391:7:5",
@@ -105,10 +105,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 367,
+                  "id": 356,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 372,
+                  "scope": 361,
                   "src": "406:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -117,7 +117,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 366,
+                    "id": 355,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "406:4:5",
@@ -131,25 +131,25 @@
                 },
                 {
                   "constant": false,
-                  "id": 369,
+                  "id": 358,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 372,
+                  "scope": 361,
                   "src": "419:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes_memory_ptr",
-                    "typeString": "bytes memory"
+                    "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 368,
+                    "id": 357,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "419:5:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
-                      "typeString": "bytes storage pointer"
+                      "typeString": "bytes"
                     }
                   },
                   "value": null,
@@ -160,40 +160,40 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 371,
+              "id": 360,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "438:0:5"
             },
-            "scope": 373,
+            "scope": 362,
             "src": "368:71:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 374,
+        "scope": 363,
         "src": "91:350:5"
       }
     ],
-    "src": "0:441:5"
+    "src": "0:442:5"
   },
   "legacyAST": {
-    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223ReceivingContractInterface.sol",
+    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223ReceivingContractInterface.sol",
     "exportedSymbols": {
       "EIP223ReceivingContractInterface": [
-        373
+        362
       ]
     },
-    "id": 374,
+    "id": 363,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 363,
+        "id": 352,
         "literals": [
           "solidity",
           "0.4",
-          ".21"
+          ".23"
         ],
         "nodeType": "PragmaDirective",
         "src": "0:23:5"
@@ -204,9 +204,9 @@
         "contractKind": "contract",
         "documentation": "@title Contract that supports the receival of EIP223 tokens.",
         "fullyImplemented": false,
-        "id": 373,
+        "id": 362,
         "linearizedBaseContracts": [
-          373
+          362
         ],
         "name": "EIP223ReceivingContractInterface",
         "nodeType": "ContractDefinition",
@@ -214,7 +214,7 @@
           {
             "body": null,
             "documentation": "@dev Standard EIP223 function that will handle incoming token transfers.\n @param _from  Token sender address.\n @param _value Amount of tokens.\n @param _data  Transaction metadata.",
-            "id": 372,
+            "id": 361,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -222,15 +222,15 @@
             "name": "tokenFallback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 370,
+              "id": 359,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 365,
+                  "id": 354,
                   "name": "_from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 372,
+                  "scope": 361,
                   "src": "391:13:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -239,7 +239,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 364,
+                    "id": 353,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "391:7:5",
@@ -253,10 +253,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 367,
+                  "id": 356,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 372,
+                  "scope": 361,
                   "src": "406:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -265,7 +265,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 366,
+                    "id": 355,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "406:4:5",
@@ -279,25 +279,25 @@
                 },
                 {
                   "constant": false,
-                  "id": 369,
+                  "id": 358,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 372,
+                  "scope": 361,
                   "src": "419:11:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bytes_memory_ptr",
-                    "typeString": "bytes memory"
+                    "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 368,
+                    "id": 357,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "419:5:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
-                      "typeString": "bytes storage pointer"
+                      "typeString": "bytes"
                     }
                   },
                   "value": null,
@@ -308,29 +308,29 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 371,
+              "id": 360,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "438:0:5"
             },
-            "scope": 373,
+            "scope": 362,
             "src": "368:71:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 374,
+        "scope": 363,
         "src": "91:350:5"
       }
     ],
-    "src": "0:441:5"
+    "src": "0:442:5"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-07T13:56:02.468Z"
+  "updatedAt": "2018-05-16T15:35:09.504Z"
 }

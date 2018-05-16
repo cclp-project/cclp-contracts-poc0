@@ -1,4 +1,4 @@
-pragma solidity 0.4.21;
+pragma solidity 0.4.23;
 
 import "./AllowanceRegistryInterface.sol";
 import "./RestrictedTransferToken.sol";
@@ -7,7 +7,7 @@ import "./EIP223.sol";
 
 contract RestrictedTransferEIP223Token is RestrictedTransferToken, EIP223 {
 
-    function RestrictedTransferEIP223Token(AllowanceRegistryInterface _registry)
+    constructor(AllowanceRegistryInterface _registry)
         public
         RestrictedTransferToken(_registry) 
     {}

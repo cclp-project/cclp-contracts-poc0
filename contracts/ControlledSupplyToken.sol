@@ -1,6 +1,6 @@
-pragma solidity 0.4.21;
+pragma solidity 0.4.23;
 
-import "zeppelin-solidity/contracts/token/ERC20/BasicToken.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/BasicToken.sol";
 
 
 contract ControlledSupplyToken is BasicToken {
@@ -12,7 +12,7 @@ contract ControlledSupplyToken is BasicToken {
         _;
     }
 
-    function ControlledSupplyToken(address _supplyController) 
+    constructor(address _supplyController) 
         public
     {
         require(_supplyController != 0);

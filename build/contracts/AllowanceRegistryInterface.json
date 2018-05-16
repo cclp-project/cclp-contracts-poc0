@@ -25,24 +25,24 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity 0.4.21;\n\n\ncontract AllowanceRegistryInterface {\n    function isAllowed(address _user) public view returns(bool _isAllowed);\n}\n",
-  "sourcePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/AllowanceRegistryInterface.sol",
+  "source": "pragma solidity 0.4.23;\n\n\ncontract AllowanceRegistryInterface {\n    function isAllowed(address _user) public view returns(bool _isAllowed);\n}\n",
+  "sourcePath": "/home/vdrg/Work/cCLP/cclp/contracts/AllowanceRegistryInterface.sol",
   "ast": {
-    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/AllowanceRegistryInterface.sol",
+    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/AllowanceRegistryInterface.sol",
     "exportedSymbols": {
       "AllowanceRegistryInterface": [
-        127
+        123
       ]
     },
-    "id": 128,
+    "id": 124,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 119,
+        "id": 115,
         "literals": [
           "solidity",
           "0.4",
-          ".21"
+          ".23"
         ],
         "nodeType": "PragmaDirective",
         "src": "0:23:1"
@@ -53,9 +53,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 127,
+        "id": 123,
         "linearizedBaseContracts": [
-          127
+          123
         ],
         "name": "AllowanceRegistryInterface",
         "nodeType": "ContractDefinition",
@@ -63,7 +63,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 126,
+            "id": 122,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -71,15 +71,15 @@
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 122,
+              "id": 118,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 121,
+                  "id": 117,
                   "name": "_user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 126,
+                  "scope": 122,
                   "src": "87:13:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -88,7 +88,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 120,
+                    "id": 116,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "87:7:1",
@@ -105,15 +105,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 125,
+              "id": 121,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 124,
+                  "id": 120,
                   "name": "_isAllowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 126,
+                  "scope": 122,
                   "src": "122:15:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -122,7 +122,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 123,
+                    "id": 119,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "122:4:1",
@@ -137,35 +137,35 @@
               ],
               "src": "121:17:1"
             },
-            "scope": 127,
+            "scope": 123,
             "src": "68:71:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 128,
+        "scope": 124,
         "src": "26:115:1"
       }
     ],
     "src": "0:142:1"
   },
   "legacyAST": {
-    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/AllowanceRegistryInterface.sol",
+    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/AllowanceRegistryInterface.sol",
     "exportedSymbols": {
       "AllowanceRegistryInterface": [
-        127
+        123
       ]
     },
-    "id": 128,
+    "id": 124,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 119,
+        "id": 115,
         "literals": [
           "solidity",
           "0.4",
-          ".21"
+          ".23"
         ],
         "nodeType": "PragmaDirective",
         "src": "0:23:1"
@@ -176,9 +176,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 127,
+        "id": 123,
         "linearizedBaseContracts": [
-          127
+          123
         ],
         "name": "AllowanceRegistryInterface",
         "nodeType": "ContractDefinition",
@@ -186,7 +186,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 126,
+            "id": 122,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -194,15 +194,15 @@
             "name": "isAllowed",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 122,
+              "id": 118,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 121,
+                  "id": 117,
                   "name": "_user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 126,
+                  "scope": 122,
                   "src": "87:13:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -211,7 +211,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 120,
+                    "id": 116,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "87:7:1",
@@ -228,15 +228,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 125,
+              "id": 121,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 124,
+                  "id": 120,
                   "name": "_isAllowed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 126,
+                  "scope": 122,
                   "src": "122:15:1",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -245,7 +245,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 123,
+                    "id": 119,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "122:4:1",
@@ -260,14 +260,14 @@
               ],
               "src": "121:17:1"
             },
-            "scope": 127,
+            "scope": 123,
             "src": "68:71:1",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 128,
+        "scope": 124,
         "src": "26:115:1"
       }
     ],
@@ -275,9 +275,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-07T13:56:02.467Z"
+  "updatedAt": "2018-05-16T15:35:09.503Z"
 }
