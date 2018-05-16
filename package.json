@@ -10,7 +10,8 @@
     "compile": "./node_modules/.bin/truffle compile",
     "build-artifact-index": "./scripts/build-artifact-index.js",
     "test": "./node_modules/.bin/truffle test",
-    "deploy-rinkeby": "./node_modules/.bin/truffle migrate --network rinkeby"
+    "deploy-rinkeby": "./node_modules/.bin/truffle migrate --network rinkeby",
+    "generate-readme": "./scripts/generate-readme.js"
   },
   "repository": {
     "type": "git",
