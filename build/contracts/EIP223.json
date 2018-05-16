@@ -139,9 +139,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity 0.4.23;\n\nimport \"openzeppelin-solidity/contracts/token/ERC20/BasicToken.sol\";\n\nimport './EIP223Interface.sol';\nimport './EIP223ReceivingContractInterface.sol';\n\n/**\n * @title ERC223 standard token implementation.\n */\ncontract EIP223 is EIP223Interface {\n    \n    /**\n     * @dev Transfer the specified amount of tokens to the specified address.\n     *      Invokes the `tokenFallback` function if the recipient is a contract.\n     *      The token transfer fails if the recipient is a contract\n     *      but does not implement the `tokenFallback` function\n     *      or the fallback function to receive funds.\n     *\n     * @param _to    Receiver address.\n     * @param _value Amount of tokens that will be transferred.\n     * @param _data  Transaction metadata.\n     */\n    function transfer(address _to, uint _value, bytes _data) public returns (bool) {\n        // Standard function transfer similar to ERC20 transfer with no _data .\n        // Added due to backwards compatibility reasons .\n        uint codeLength;\n        assembly {\n            // Retrieve the size of the code on target address, this needs assembly .\n            codeLength := extcodesize(_to)\n        }\n        require(super.transfer(_to, _value));\n        if(codeLength>0) {\n            EIP223ReceivingContractInterface receiver = EIP223ReceivingContractInterface(_to);\n            receiver.tokenFallback(msg.sender, _value, _data);\n        }\n        emit Transfer(msg.sender, _to, _value, _data);\n        return true;\n    }\n\n    /**\n     * @dev Transfer the specified amount of tokens to the specified address.\n     *      Invokes the `tokenFallback` function if the recipient is a contract.\n     *      The token transfer fails if the recipient is a contract\n     *      but does not implement the `tokenFallback` function\n     *      or the fallback function to receive funds.\n     *\n     * @param _to    Receiver address.\n     * @param _value Amount of tokens that will be transferred.\n     */\n    function transfer(address _to, uint256 _value) public returns (bool) {\n        bytes memory empty;\n        require(transfer(_to, _value, empty));\n        return true;\n    }\n}\n",
-  "sourcePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223.sol",
+  "sourcePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223.sol",
   "ast": {
-    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223.sol",
+    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223.sol",
     "exportedSymbols": {
       "EIP223": [
         323
@@ -166,13 +166,13 @@
         "id": 241,
         "nodeType": "ImportDirective",
         "scope": 324,
-        "sourceUnit": 874,
+        "sourceUnit": 974,
         "src": "25:68:3",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223Interface.sol",
+        "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223Interface.sol",
         "file": "./EIP223Interface.sol",
         "id": 242,
         "nodeType": "ImportDirective",
@@ -183,7 +183,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223ReceivingContractInterface.sol",
+        "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223ReceivingContractInterface.sol",
         "file": "./EIP223ReceivingContractInterface.sol",
         "id": 243,
         "nodeType": "ImportDirective",
@@ -216,7 +216,7 @@
         ],
         "contractDependencies": [
           350,
-          982
+          1082
         ],
         "contractKind": "contract",
         "documentation": "@title ERC223 standard token implementation.",
@@ -225,7 +225,7 @@
         "linearizedBaseContracts": [
           323,
           350,
-          982
+          1082
         ],
         "name": "EIP223",
         "nodeType": "ContractDefinition",
@@ -348,7 +348,7 @@
                             "name": "super",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1275,
+                            "referencedDeclaration": 1375,
                             "src": "1212:5:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_super$_EIP223_$323",
@@ -362,7 +362,7 @@
                           "lValueRequested": false,
                           "memberName": "transfer",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 973,
+                          "referencedDeclaration": 1073,
                           "src": "1212:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -395,10 +395,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1246,
-                        1247
+                        1346,
+                        1347
                       ],
-                      "referencedDeclaration": 1246,
+                      "referencedDeclaration": 1346,
                       "src": "1204:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -582,7 +582,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1243,
+                                "referencedDeclaration": 1343,
                                 "src": "1399:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -705,7 +705,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1243,
+                          "referencedDeclaration": 1343,
                           "src": "1459:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -790,7 +790,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
                         338,
-                        981
+                        1081
                       ],
                       "referencedDeclaration": 338,
                       "src": "1450:8:3",
@@ -1119,10 +1119,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1246,
-                        1247
+                        1346,
+                        1347
                       ],
-                      "referencedDeclaration": 1246,
+                      "referencedDeclaration": 1346,
                       "src": "2103:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1277,7 +1277,7 @@
             "scope": 323,
             "src": "1996:172:3",
             "stateMutability": "nonpayable",
-            "superFunction": 973,
+            "superFunction": 1073,
             "visibility": "public"
           }
         ],
@@ -1288,7 +1288,7 @@
     "src": "0:2171:3"
   },
   "legacyAST": {
-    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223.sol",
+    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223.sol",
     "exportedSymbols": {
       "EIP223": [
         323
@@ -1313,13 +1313,13 @@
         "id": 241,
         "nodeType": "ImportDirective",
         "scope": 324,
-        "sourceUnit": 874,
+        "sourceUnit": 974,
         "src": "25:68:3",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223Interface.sol",
+        "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223Interface.sol",
         "file": "./EIP223Interface.sol",
         "id": 242,
         "nodeType": "ImportDirective",
@@ -1330,7 +1330,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223ReceivingContractInterface.sol",
+        "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223ReceivingContractInterface.sol",
         "file": "./EIP223ReceivingContractInterface.sol",
         "id": 243,
         "nodeType": "ImportDirective",
@@ -1363,7 +1363,7 @@
         ],
         "contractDependencies": [
           350,
-          982
+          1082
         ],
         "contractKind": "contract",
         "documentation": "@title ERC223 standard token implementation.",
@@ -1372,7 +1372,7 @@
         "linearizedBaseContracts": [
           323,
           350,
-          982
+          1082
         ],
         "name": "EIP223",
         "nodeType": "ContractDefinition",
@@ -1495,7 +1495,7 @@
                             "name": "super",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1275,
+                            "referencedDeclaration": 1375,
                             "src": "1212:5:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_super$_EIP223_$323",
@@ -1509,7 +1509,7 @@
                           "lValueRequested": false,
                           "memberName": "transfer",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 973,
+                          "referencedDeclaration": 1073,
                           "src": "1212:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -1542,10 +1542,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1246,
-                        1247
+                        1346,
+                        1347
                       ],
-                      "referencedDeclaration": 1246,
+                      "referencedDeclaration": 1346,
                       "src": "1204:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1729,7 +1729,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1243,
+                                "referencedDeclaration": 1343,
                                 "src": "1399:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -1852,7 +1852,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1243,
+                          "referencedDeclaration": 1343,
                           "src": "1459:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1937,7 +1937,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
                         338,
-                        981
+                        1081
                       ],
                       "referencedDeclaration": 338,
                       "src": "1450:8:3",
@@ -2266,10 +2266,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1246,
-                        1247
+                        1346,
+                        1347
                       ],
-                      "referencedDeclaration": 1246,
+                      "referencedDeclaration": 1346,
                       "src": "2103:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2424,7 +2424,7 @@
             "scope": 323,
             "src": "1996:172:3",
             "stateMutability": "nonpayable",
-            "superFunction": 973,
+            "superFunction": 1073,
             "visibility": "public"
           }
         ],
@@ -2440,5 +2440,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-16T15:35:09.504Z"
+  "updatedAt": "2018-05-16T23:12:23.871Z"
 }
