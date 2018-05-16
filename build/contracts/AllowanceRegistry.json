@@ -2914,7 +2914,145 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {
+    "3": {
+      "events": {
+        "0x887d9984e762f92db7d8e62204192cc636432b470e181f49d117b7e8ac8c0505": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_registar",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_timestamp",
+              "type": "uint256"
+            }
+          ],
+          "name": "Allow",
+          "type": "event"
+        },
+        "0x51c581be11198e3a89904557c1a9915b9dd3c04442606a6f63898835f6cbec02": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_registar",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_timestamp",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deny",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xf7a0e63651a9713698f22e205fe955043cba67a2",
+      "transactionHash": "0x4859275d44dd70bf4e1e745f82d9f7f1ee6892f669587085e46c77e523906a74"
+    },
+    "4": {
+      "events": {
+        "0x887d9984e762f92db7d8e62204192cc636432b470e181f49d117b7e8ac8c0505": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_registar",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_timestamp",
+              "type": "uint256"
+            }
+          ],
+          "name": "Allow",
+          "type": "event"
+        },
+        "0x51c581be11198e3a89904557c1a9915b9dd3c04442606a6f63898835f6cbec02": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "_registar",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "_user",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_timestamp",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deny",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x5b4a6d30d9a747bb9f818e839494801131a25f60",
+      "transactionHash": "0x75da0ebc88422403380a978cd2f3bb0133c45f5761ec78f6057144e6809f1f60"
+    }
   },
   "networks": {},
   "schemaVersion": "2.0.0",

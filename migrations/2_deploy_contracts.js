@@ -1,23 +1,32 @@
 const AllowanceRegistry = artifacts.require('AllowanceRegistry');
 const cCLP = artifacts.require('cCLP');
 
-const REGISTRY_OWNER="0x4503d2cb92be591f4f4e650a953f7da10cb2ffe7"; //multisig key
+const cCLPRegistryOwner_RINKEBY="0x4503d2cb92be591f4f4e650a953f7da10cb2ffe7"; //multisig key
+const cCLPSupplyController_RINKEBY="0x515f4508f0b287b3b953f120b472a9d346e6e616"; //multisig key
 
-const SUPPLY_CONTROLLER="0x515f4508f0b287b3b953f120b472a9d346e6e616"; //ajunge key
-const TOKEN_OWNER="0x515f4508f0b287b3b953f120b472a9d346e6e616"; //ajunge key
+const ajungeKey='0x9C803151d0fD38f8C9FCEe7D5d02498dF6067E5A';
 
-module.exports = function (deployer) {
+
+module.exports = function (deployer,network) {
   deployer.deploy(AllowanceRegistry)
   .then(() => {
     return AllowanceRegistry.deployed();
   })
   .then((instance) => {
-    return instance.transferOwnership(REGISTRY_OWNER);
+    let registryOwner=ajungeKey;
+    if (network == "rinkeby") {
+      registryOwner=cCLPRegistryOwner_RINKEBY
+    }
+    return instance.transferOwnership(registryOwner);
   })
   .then(() => {
+    let supplyController=ajungeKey;
+    if (network == "rinkeby") {
+      supplyController=cCLPSupplyController_RINKEBY
+    }
     return deployer.deploy(
       cCLP, 
-      SUPPLY_CONTROLLER,
+      supplyController,
       AllowanceRegistry.address
     );
   })
@@ -25,7 +34,11 @@ module.exports = function (deployer) {
     return cCLP.deployed();
   })
   .then((instance) => {
-    return instance.transferOwnership(TOKEN_OWNER);
+    let tokenOwner=ajungeKey;
+    if (network == "rinkeby") {
+      tokenOwner=cCLPSupplyController_RINKEBY
+    }
+    return instance.transferOwnership(tokenOwner);
   })
   
 }
