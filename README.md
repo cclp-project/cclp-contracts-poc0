@@ -22,7 +22,7 @@
 ### Ropsten testnet (id: 3)
 |Contract|Address|
 | --|--|
-|AllowanceRegistry|[0xd729ab6b6498f67e89eb8baab545ee6926974f8d](https://ropsten.etherscan.io/address/0xd729ab6b6498f67e89eb8baab545ee6926974f8d)|
-|cCLP|[0xa973c177a9498db79d0f6beaedc8a2f679414f14](https://ropsten.etherscan.io/address/0xa973c177a9498db79d0f6beaedc8a2f679414f14)|
+|AllowanceRegistry|[0xf7a0e63651a9713698f22e205fe955043cba67a2](https://ropsten.etherscan.io/address/0xf7a0e63651a9713698f22e205fe955043cba67a2)|
+|cCLP|[0xa4b9467abf384008085142a93670985ecf9e61ee](https://ropsten.etherscan.io/address/0xa4b9467abf384008085142a93670985ecf9e61ee)|
 
 
