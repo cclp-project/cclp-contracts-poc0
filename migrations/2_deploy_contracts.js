@@ -7,7 +7,7 @@ const cCLPSupplyController_RINKEBY="0x515f4508f0b287b3b953f120b472a9d346e6e616";
 const ajungeKey='0x9C803151d0fD38f8C9FCEe7D5d02498dF6067E5A';
 
 
-module.exports = function (deployer) {
+module.exports = function (deployer,network) {
   deployer.deploy(AllowanceRegistry)
   .then(() => {
     return AllowanceRegistry.deployed();
