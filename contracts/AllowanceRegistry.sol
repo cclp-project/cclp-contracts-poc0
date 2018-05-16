@@ -1,6 +1,6 @@
-pragma solidity 0.4.21;
+pragma solidity 0.4.23;
 
-import "zeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
 import "./AllowanceRegistryInterface.sol";
 
@@ -10,14 +10,14 @@ contract AllowanceRegistry is AllowanceRegistryInterface, Ownable {
     mapping (address => bool) public registrars;
     mapping (address => bool) public allowed;
 
+    event Allow(address indexed _registar, address indexed _user, uint256 _timestamp); 
+    event Deny (address indexed _registar, address indexed _user, uint256 _timestamp); 
+
     modifier onlyRegistrar {
         require(registrars[msg.sender]);
         _;
     }
     
-    function AllowanceRegistry() public 
-    {}
-
     function setRegistrar(address _registar, bool _value) public onlyOwner {
         registrars[_registar] =_value;
     }
@@ -36,9 +36,5 @@ contract AllowanceRegistry is AllowanceRegistryInterface, Ownable {
     function isAllowed(address _user) public view returns(bool _isAllowed){
         return allowed[_user];
     }
-
-    event Allow(address indexed _registar, address indexed _user, uint256 _timestamp); 
-    event Deny (address indexed _registar, address indexed _user, uint256 _timestamp); 
-
 
 }

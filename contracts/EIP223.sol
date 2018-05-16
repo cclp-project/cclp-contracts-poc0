@@ -1,6 +1,6 @@
-pragma solidity 0.4.21;
+pragma solidity 0.4.23;
 
-import "zeppelin-solidity/contracts/token/ERC20/BasicToken.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/BasicToken.sol";
 
 import './EIP223Interface.sol';
 import './EIP223ReceivingContractInterface.sol';
@@ -9,10 +9,6 @@ import './EIP223ReceivingContractInterface.sol';
  * @title ERC223 standard token implementation.
  */
 contract EIP223 is EIP223Interface {
-    function() public {
-        //if ether is sent to this address, send it back.
-        revert();
-    }
     
     /**
      * @dev Transfer the specified amount of tokens to the specified address.

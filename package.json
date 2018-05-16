@@ -7,10 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "compile": "./node_modules/.bin/truffle compile",
+    "compile": "truffle compile",
     "build-artifact-index": "./scripts/build-artifact-index.js",
-    "test": "./node_modules/.bin/truffle test",
-    "deploy-rinkeby": "./node_modules/.bin/truffle migrate --network rinkeby",
+    "test": "truffle test",
+    "migrate": "truffle migrate",
+    "deploy-rinkeby": "truffle migrate --network rinkeby",
     "generate-readme": "./scripts/generate-readme.js"
   },
   "repository": {
@@ -29,8 +30,8 @@
   "homepage": "https://github.com/ajunge/cclp#readme",
   "devDependencies": {
     "ganache-cli": "^6.1.0",
-    "truffle": "4.1.5",
+    "truffle": "4.1.8",
     "truffle-hdwallet-provider": "0.0.3",
-    "zeppelin-solidity": "1.8.0"
+    "openzeppelin-solidity": "1.9.0"
   }
 }
