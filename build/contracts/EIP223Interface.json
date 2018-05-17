@@ -139,9 +139,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity 0.4.23;\n\nimport \"openzeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol\";\n\n/**\n * @title EIP223 standard token interface.\n */\n\ncontract EIP223Interface is ERC20Basic {\n    /**\n      * @dev triggered when transfer is successfully called.\n      *\n      * @param _from  Sender address.\n      * @param _to    Receiver address.\n      * @param _value Amount of tokens that will be transferred.\n      * @param _data  Transaction metadata.\n      */\n    event Transfer(address indexed _from, address indexed _to, uint256 indexed _value, bytes _data);\n\n    /**\n      * @dev Transfer the specified amount of tokens to the specified address.\n      *      Now with a new parameter _data.\n      *\n      * @param _to    Receiver address.\n      * @param _value Amount of tokens that will be transferred.\n      * @param _data  Transaction metadata.\n      */\n    function transfer(address _to, uint _value, bytes _data) public returns (bool);\n}\n",
-  "sourcePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223Interface.sol",
+  "sourcePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223Interface.sol",
   "ast": {
-    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223Interface.sol",
+    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223Interface.sol",
     "exportedSymbols": {
       "EIP223Interface": [
         350
@@ -166,7 +166,7 @@
         "id": 326,
         "nodeType": "ImportDirective",
         "scope": 351,
-        "sourceUnit": 983,
+        "sourceUnit": 1083,
         "src": "25:68:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -180,10 +180,10 @@
               "id": 327,
               "name": "ERC20Basic",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 982,
+              "referencedDeclaration": 1082,
               "src": "175:10:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20Basic_$982",
+                "typeIdentifier": "t_contract$_ERC20Basic_$1082",
                 "typeString": "contract ERC20Basic"
               }
             },
@@ -193,7 +193,7 @@
           }
         ],
         "contractDependencies": [
-          982
+          1082
         ],
         "contractKind": "contract",
         "documentation": "@title EIP223 standard token interface.",
@@ -201,7 +201,7 @@
         "id": 350,
         "linearizedBaseContracts": [
           350,
-          982
+          1082
         ],
         "name": "EIP223Interface",
         "nodeType": "ContractDefinition",
@@ -472,7 +472,7 @@
     "src": "0:947:4"
   },
   "legacyAST": {
-    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/EIP223Interface.sol",
+    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/EIP223Interface.sol",
     "exportedSymbols": {
       "EIP223Interface": [
         350
@@ -497,7 +497,7 @@
         "id": 326,
         "nodeType": "ImportDirective",
         "scope": 351,
-        "sourceUnit": 983,
+        "sourceUnit": 1083,
         "src": "25:68:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -511,10 +511,10 @@
               "id": 327,
               "name": "ERC20Basic",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 982,
+              "referencedDeclaration": 1082,
               "src": "175:10:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC20Basic_$982",
+                "typeIdentifier": "t_contract$_ERC20Basic_$1082",
                 "typeString": "contract ERC20Basic"
               }
             },
@@ -524,7 +524,7 @@
           }
         ],
         "contractDependencies": [
-          982
+          1082
         ],
         "contractKind": "contract",
         "documentation": "@title EIP223 standard token interface.",
@@ -532,7 +532,7 @@
         "id": 350,
         "linearizedBaseContracts": [
           350,
-          982
+          1082
         ],
         "name": "EIP223Interface",
         "nodeType": "ContractDefinition",
@@ -808,5 +808,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-16T15:35:09.504Z"
+  "updatedAt": "2018-05-16T23:12:23.872Z"
 }

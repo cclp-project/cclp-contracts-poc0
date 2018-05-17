@@ -26,9 +26,9 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity 0.4.23;\n\n\ncontract AllowanceRegistryInterface {\n    function isAllowed(address _user) public view returns(bool _isAllowed);\n}\n",
-  "sourcePath": "/home/vdrg/Work/cCLP/cclp/contracts/AllowanceRegistryInterface.sol",
+  "sourcePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/AllowanceRegistryInterface.sol",
   "ast": {
-    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/AllowanceRegistryInterface.sol",
+    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/AllowanceRegistryInterface.sol",
     "exportedSymbols": {
       "AllowanceRegistryInterface": [
         123
@@ -151,7 +151,7 @@
     "src": "0:142:1"
   },
   "legacyAST": {
-    "absolutePath": "/home/vdrg/Work/cCLP/cclp/contracts/AllowanceRegistryInterface.sol",
+    "absolutePath": "/home/ajunge/work/cclp-project/cclp-contracts/contracts/AllowanceRegistryInterface.sol",
     "exportedSymbols": {
       "AllowanceRegistryInterface": [
         123
@@ -279,5 +279,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-05-16T15:35:09.503Z"
+  "updatedAt": "2018-05-16T23:12:23.871Z"
 }
